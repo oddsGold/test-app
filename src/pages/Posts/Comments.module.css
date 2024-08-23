@@ -1,0 +1,31 @@
+.commentsContainer {
+    padding: 16px;
+    background-color: #f9f9f9;
+}
+
+.commentsList {
+    list-style-type: none;
+    padding: 0;
+}
+
+.commentsList > p {
+    font-size: 26px;
+    font-style: italic;
+}
+
+.commentItem {
+    border-bottom: 1px solid #ddd;
+    padding: 0;
+}
+
+.commentName {
+    font-weight: bold;
+}
+
+.commentEmail {
+    color: #555;
+}
+
+.commentBody {
+    margin-top: 4px;
+}

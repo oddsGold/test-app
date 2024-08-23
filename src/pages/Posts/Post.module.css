@@ -1,0 +1,51 @@
+.gridContainer {
+    padding: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 80px;
+}
+
+.gridItem {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.image {
+    width: 100%;
+    object-fit: cover;
+}
+
+.title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px;
+    height: 60px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.content {
+    font-size: 14px;
+    margin: 0 10px 10px;
+    height: 80px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+}
+
+.currentPost {
+    -webkit-box-shadow: -1px 2px 23px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 2px 23px 0px rgba(0,0,0,0.75);
+    box-shadow: -1px 2px 23px 0px rgba(0,0,0,0.75);
+}

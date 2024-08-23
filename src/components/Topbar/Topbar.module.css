@@ -1,0 +1,30 @@
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.logo {
+    text-decoration: none;
+    color: #222222;
+    font-size: 20px;
+}
+
+.loginButton, .logoutButton {
+    text-decoration: none;
+    padding: 8px 16px;
+    border: none;
+    background-color: #d8d8d8;
+    color: #222222;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 20px;
+}
+
+.loginButton:hover {
+    background-color: rgba(73, 71, 71, 0.88);
+    color: #fff;
+}
