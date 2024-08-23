@@ -9,12 +9,12 @@ Clone the repository
 
 For HTTPS:
 ```bash
-git clone https://github.com/username/repository.git
+git clone https://github.com/oddsGold/test-app.git
 ```
 
 For SSH:
 ```bash
-git clone git@github.com:username/repository.git
+git clone git@github.com:oddsGold/test-app.git
 ```
 
 Go to the project directory
