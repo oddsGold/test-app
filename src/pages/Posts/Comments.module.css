@@ -1,31 +1,38 @@
 .commentsContainer {
-    padding: 16px;
+    padding: 20px;
     background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .commentsList {
     list-style-type: none;
     padding: 0;
+    margin: 0;
 }
 
 .commentsList > p {
-    font-size: 26px;
-    font-style: italic;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
 }
 
 .commentItem {
     border-bottom: 1px solid #ddd;
-    padding: 0;
+    padding: 10px 0;
 }
 
 .commentName {
     font-weight: bold;
+    font-size: 18px;
 }
 
 .commentEmail {
     color: #555;
+    font-size: 14px;
 }
 
 .commentBody {
     margin-top: 4px;
+    font-size: 16px;
 }

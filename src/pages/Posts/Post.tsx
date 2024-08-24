@@ -1,32 +1,39 @@
 import React from "react";
-import {useGetPostsQuery} from "../../redux/posts/postApiSlice.ts";
+import { useGetPostsQuery } from "../../redux/posts/postApiSlice.ts";
 import styles from "./Post.module.css";
-import {NavLink} from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import Loader from "../../components/Loader/Loader.tsx";
+import {Post} from "../../redux/posts/post.type.ts";
 
-const Post: React.FC = () => {
-    const {data: posts, error, isLoading} = useGetPostsQuery();
+const PostComponent: React.FC = () => {
+    const { data: posts, isLoading } = useGetPostsQuery();
 
+    if (isLoading) {
+        return <Loader />;
+    }
 
-    if (isLoading) return <p>Loading...</p>;
-    if (error) return <p>Error occurred: {error.message}</p>;
+    if (!posts || posts.length === 0) {
+        return <p>No posts available.</p>;
+    }
 
     return (
         <div className={styles.gridContainer}>
-            {posts && posts.length > 0 ? (
-                <div className={styles.grid}>
-                    {posts.map(post => (
-                        <NavLink  to={`/posts/${post.id}/comments`} state={{ post }}  key={post.id} className={styles.gridItem}>
-                            <img src="https://via.placeholder.com/200x100" alt={post.title} className={styles.image} />
-                            <h2 className={styles.title}>{post.title}</h2>
-                            <p className={styles.content}>{post.body}</p>
-                        </NavLink>
-                    ))}
-                </div>
-            ) : (
-                <p>No posts available.</p>
-            )}
+            <div className={styles.grid}>
+                {posts.map((post: Post) => (
+                    <NavLink
+                        to={`/posts/${post.id}/comments`}
+                        state={{ post }}
+                        key={post.id}
+                        className={styles.gridItem}
+                    >
+                        <img src="https://via.placeholder.com/200x100" alt={post.title} className={styles.image} />
+                        <h2 className={styles.title}>{post.title}</h2>
+                        <p className={styles.content}>{post.body}</p>
+                    </NavLink>
+                ))}
+            </div>
         </div>
-    )
-}
+    );
+};
 
-export default Post;
+export default PostComponent;

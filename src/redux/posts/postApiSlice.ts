@@ -5,8 +5,7 @@ export const postApiSlice = api.injectEndpoints({
     endpoints: builder => ({
         getPosts: builder.query<Post[], void>({
             query: () => ({
-                url: '/posts',
-                transformResponse: (response: Post[]) => response,
+                url: '/posts'
             }),
         }),
         getCurrentPost: builder.query<Comment[], string>({

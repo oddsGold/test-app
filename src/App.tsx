@@ -1,7 +1,7 @@
 import React from 'react'
 import {ToastContainer} from "react-toastify";
 import "react-toastify/dist/ReactToastify.css"
-import {Routes, Route, Navigate} from 'react-router-dom';
+import {Routes, Route} from 'react-router-dom';
 import Layout from './components/Layout.tsx';
 import Post from "./pages/Posts/Post.tsx";
 import Login from "./pages/Auth/LogIn.tsx";

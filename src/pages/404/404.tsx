@@ -1,14 +1,20 @@
-import React from 'react'
+import React from 'react';
+import style from './404.module.css';
+import {NavLink} from "react-router-dom";
 
-const PageNotFound:React.FC = () => {
+const PageNotFound: React.FC = () => {
     return (
         <div id="wrapper">
-            <img src="https://i.imgur.com/qIufhof.png"  alt="image 404"/>
-            <div id="info">
-                <h3>This page could not be found</h3>
-            </div>
-        </div >
-    )
-}
+            <section className={style.errorContainer}>
+                <span className={style.four}><span className={style.screenReaderText}>4</span></span>
+                <span className={style.zero}><span className={style.screenReaderText}>0</span></span>
+                <span className={style.four}><span className={style.screenReaderText}>4</span></span>
+            </section>
+            <section className={style.errorContainer}>
+                <NavLink to="/" className={style.moreLink}>Go HOME</NavLink>
+            </section>
+        </div>
+    );
+};
 
-export default PageNotFound
+export default PageNotFound;
