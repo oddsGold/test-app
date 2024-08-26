@@ -15,7 +15,7 @@
     "allowSyntheticDefaultImports": true,
     "allowJs": true,
     "strict": true,
-    "noUnusedLocals": true,
+    "noUnusedLocals": false,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
